@@ -1,0 +1,4 @@
+source .venv/bin/activate
+python .venv/training_models.py
+
+python models/training_models.py
