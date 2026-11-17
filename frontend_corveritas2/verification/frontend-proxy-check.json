@@ -1,0 +1,24 @@
+{
+  "purpose": "Live API versus direct artifact inference on synthetic complete and missing-value inputs",
+  "models": [
+    {
+      "model_id": "mlp",
+      "cases": 2,
+      "max_absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "model_id": "cnn",
+      "cases": 2,
+      "max_absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "model_id": "random_forest",
+      "cases": 2,
+      "max_absolute_difference": 0.0,
+      "passed": true
+    }
+  ],
+  "api_origin": "http://127.0.0.1:5173"
+}

@@ -1,0 +1,14 @@
+# Verified on macOS arm64, Python 3.11. Python 3.10–3.12 is recommended.
+# Keep sklearn aligned with the trusted serialized artifacts (1.6.1).
+fastapi==0.115.12
+pydantic==2.11.3
+uvicorn==0.34.0
+numpy==2.0.2
+pandas==2.3.3
+scikit-learn==1.6.1
+joblib==1.5.3
+tensorflow==2.20.0
+keras==3.10.0
+matplotlib==3.10.6
+httpx==0.28.1
+pytest==8.3.5

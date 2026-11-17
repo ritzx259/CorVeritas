@@ -1,0 +1,10 @@
+{
+  "age": 55,
+  "sex": "Male",
+  "bmi": 28.4,
+  "systolic_bp": 145,
+  "diastolic_bp": 90,
+  "total_cholesterol": 240,
+  "diabetes_history": "Yes",
+  "smoking_history": "Former smoker"
+}

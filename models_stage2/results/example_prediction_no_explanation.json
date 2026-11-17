@@ -1,0 +1,50 @@
+{
+  "model_version": "corveritas-stage2-1.0.0",
+  "run_id": "20261023T181032Z-cc7796d8",
+  "model": "neural",
+  "conditions": [
+    {
+      "condition": "coronary_heart_disease",
+      "condition_name": "Reported coronary heart disease history",
+      "model_score": 0.027989404276013374,
+      "score_type": "uncalibrated_model_score",
+      "selected_threshold": 0.14829950034618378,
+      "binary_classification": 0,
+      "classification_meaning": "Above/below a validation-selected research threshold for reported diagnosis history; not a diagnosis.",
+      "feature_contributions": []
+    },
+    {
+      "condition": "heart_failure",
+      "condition_name": "Reported congestive heart failure history",
+      "model_score": 0.024978432804346085,
+      "score_type": "uncalibrated_model_score",
+      "selected_threshold": 0.13373057544231415,
+      "binary_classification": 0,
+      "classification_meaning": "Above/below a validation-selected research threshold for reported diagnosis history; not a diagnosis.",
+      "feature_contributions": []
+    },
+    {
+      "condition": "heart_attack_history",
+      "condition_name": "Reported previous myocardial infarction",
+      "model_score": 0.0810619369149208,
+      "score_type": "uncalibrated_model_score",
+      "selected_threshold": 0.1541489213705063,
+      "binary_classification": 0,
+      "classification_meaning": "Above/below a validation-selected research threshold for reported diagnosis history; not a diagnosis.",
+      "feature_contributions": []
+    }
+  ],
+  "warnings": [
+    "Smoking is encoded as lifetime 100+ cigarettes, not current smoking status. Former/current smoker implies this lifetime threshold; confirm it in the frontend."
+  ],
+  "limitations": [
+    "Research prototype, not a validated diagnostic tool or a substitute for medical assessment.",
+    "Scores estimate associations with self-reported previous diagnoses, not future disease onset.",
+    "Uncalibrated model scores; positive weighting can materially alter probability calibration.",
+    "Cross-sectional measurements may follow diagnosis, treatment or lifestyle changes; contributions are not causal.",
+    "Unweighted NHANES sample evaluation is not a US population estimate; survey design is not modeled.",
+    "Complete-label selection, missing measurements, small positive counts and US sampling limit generalization."
+  ],
+  "explanation_method": null,
+  "explanation_limitations": null
+}

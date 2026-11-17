@@ -1,0 +1,58 @@
+{
+  "model_id": "random_forest",
+  "accuracy": 0.8586956521739131,
+  "precision": 0.8584905660377359,
+  "recall": 0.8921568627450981,
+  "f1": 0.875,
+  "roc_auc": 0.9244380679100908,
+  "average_precision": 0.9354314714145076,
+  "provenance": "Evaluated the saved random_forest artifact on the source-defined 184-row test partition (20%, stratified, random_state=42, threshold=0.50). The partition is reconstructed from the original training script. No retraining or threshold tuning. Saved 2026-11-09T12:18:23.161611+00:00. Not external or clinical validation.",
+  "evaluation": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "partition": "test",
+    "threshold": 0.5,
+    "used_during_training": false,
+    "sample_count": 184,
+    "training_sample_count": 736
+  },
+  "dataset": {
+    "path": "data/heart_disease_uci.csv",
+    "sha256": "574f2fa2b43012fa25fca4fcdb36bd7c6bccdd0af4242f6c0e4c8633c5a072ae",
+    "row_count": 920
+  },
+  "training_source": {
+    "path": "models/training_model3.py",
+    "sha256": "f1b4b3db7c7182313b1879fb77fdc09aa02752817881e3bf9847c558a7ca8b0d"
+  },
+  "artifact_sha256": {
+    "corveritas_stage3_random_forest.joblib": "332fabf2f50a0927217ccfaa7838065efcf29424921de4e11f4512a4b1d929be"
+  },
+  "evaluation_indices_sha256": "7a0a899817a2c05c5352f6d5f68131d7c0a2897d5e9a0fe1bbc6f09d660d8dfe",
+  "confusion_matrix": {
+    "label_order": [
+      0,
+      1
+    ],
+    "values": [
+      [
+        67,
+        15
+      ],
+      [
+        11,
+        91
+      ]
+    ]
+  },
+  "class_counts": {
+    "0": 82,
+    "1": 102
+  },
+  "software": {
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.6.1"
+  },
+  "created_at": "2026-11-09T12:18:23.161611+00:00"
+}

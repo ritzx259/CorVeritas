@@ -1,0 +1,136 @@
+{
+  "model": "neural",
+  "samples": 20,
+  "method": "Exact grouped interventional Shapley values on model-score scale",
+  "background_size": 16,
+  "limitations": "Training-background associations, not causal effects. Mixed feature coalitions may be physiologically implausible or outside the data distribution.",
+  "human_readable_example": {
+    "coronary_heart_disease": [
+      {
+        "feature": "age",
+        "contribution": 0.058481786531046964,
+        "description": "age increases the model score by 0.0585 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "smoking_history",
+        "contribution": 0.01608984058839269,
+        "description": "smoking_history increases the model score by 0.0161 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "sex",
+        "contribution": -0.011221079717870452,
+        "description": "sex decreases the model score by 0.0112 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "systolic_bp",
+        "contribution": -0.004705880520816663,
+        "description": "systolic_bp decreases the model score by 0.0047 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "diabetes_history",
+        "contribution": -0.004260307821937204,
+        "description": "diabetes_history decreases the model score by 0.0043 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "total_cholesterol",
+        "contribution": 0.004013795758012861,
+        "description": "total_cholesterol increases the model score by 0.0040 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "diastolic_bp",
+        "contribution": 0.003987549423754899,
+        "description": "diastolic_bp increases the model score by 0.0040 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "bmi",
+        "contribution": 0.0006895412145127011,
+        "description": "bmi increases the model score by 0.0007 relative to the sampled training background; association, not causation."
+      }
+    ],
+    "heart_failure": [
+      {
+        "feature": "age",
+        "contribution": 0.04356459193513729,
+        "description": "age increases the model score by 0.0436 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "smoking_history",
+        "contribution": 0.013410249577646027,
+        "description": "smoking_history increases the model score by 0.0134 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "systolic_bp",
+        "contribution": -0.00879399924633617,
+        "description": "systolic_bp decreases the model score by 0.0088 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "bmi",
+        "contribution": -0.008231567366692616,
+        "description": "bmi decreases the model score by 0.0082 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "total_cholesterol",
+        "contribution": 0.004355300554720998,
+        "description": "total_cholesterol increases the model score by 0.0044 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "diabetes_history",
+        "contribution": -0.002848788598384999,
+        "description": "diabetes_history decreases the model score by 0.0028 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "diastolic_bp",
+        "contribution": -0.0015459939486390795,
+        "description": "diastolic_bp decreases the model score by 0.0015 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "sex",
+        "contribution": -0.0009628522387430394,
+        "description": "sex decreases the model score by 0.0010 relative to the sampled training background; association, not causation."
+      }
+    ],
+    "heart_attack_history": [
+      {
+        "feature": "age",
+        "contribution": 0.04414509857451776,
+        "description": "age increases the model score by 0.0441 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "smoking_history",
+        "contribution": 0.021693703485652804,
+        "description": "smoking_history increases the model score by 0.0217 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "sex",
+        "contribution": -0.00665307365819956,
+        "description": "sex decreases the model score by 0.0067 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "systolic_bp",
+        "contribution": -0.004953809052040015,
+        "description": "systolic_bp decreases the model score by 0.0050 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "total_cholesterol",
+        "contribution": 0.002719405893898852,
+        "description": "total_cholesterol increases the model score by 0.0027 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "diabetes_history",
+        "contribution": -0.0026391895199537885,
+        "description": "diabetes_history decreases the model score by 0.0026 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "diastolic_bp",
+        "contribution": 0.0011338543453405237,
+        "description": "diastolic_bp increases the model score by 0.0011 relative to the sampled training background; association, not causation."
+      },
+      {
+        "feature": "bmi",
+        "contribution": 0.00011973694090983145,
+        "description": "bmi increases the model score by 0.0001 relative to the sampled training background; association, not causation."
+      }
+    ]
+  },
+  "global_warning": "Small random validation sample; importance estimates and permutation scores are unstable with rare outcomes. Correlated inputs redistribute importance."
+}

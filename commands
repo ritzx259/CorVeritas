@@ -1,0 +1,13 @@
+source .venv/bin/activate
+python models/training_models.py
+
+
+to start server (localhost):
+
+cd frontend_corveritas2
+source .venv/bin/activate
+python gui2.py
+
+stage2 commands:
+
+models_stage2/.venv/bin/python models_stage2/train.py --model-dir models_stage2/models/run2

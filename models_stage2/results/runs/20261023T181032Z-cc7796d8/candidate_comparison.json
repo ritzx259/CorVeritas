@@ -1,0 +1,126 @@
+[
+  {
+    "model": "baseline",
+    "C": 0.1,
+    "class_weight": null,
+    "validation_macro_ap": 0.19877133093982483
+  },
+  {
+    "model": "baseline",
+    "C": 0.1,
+    "class_weight": "balanced",
+    "validation_macro_ap": 0.19806586192692588
+  },
+  {
+    "model": "baseline",
+    "C": 1.0,
+    "class_weight": null,
+    "validation_macro_ap": 0.19748404780799125
+  },
+  {
+    "model": "baseline",
+    "C": 1.0,
+    "class_weight": "balanced",
+    "validation_macro_ap": 0.19621723244962033
+  },
+  {
+    "model": "baseline",
+    "C": 10.0,
+    "class_weight": null,
+    "validation_macro_ap": 0.19574252407669168
+  },
+  {
+    "model": "baseline",
+    "C": 10.0,
+    "class_weight": "balanced",
+    "validation_macro_ap": 0.19569440870427482
+  },
+  {
+    "model": "neural",
+    "learning_rate": 0.001,
+    "positive_weighting": false,
+    "positive_weights": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "batch_size": 32,
+    "maximum_epochs": 100,
+    "patience": 15,
+    "best_epoch": 21,
+    "validation_macro_ap": 0.2107449651469663,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "gradient_clip_norm": 1.0,
+    "scheduler": "ReduceLROnPlateau(validation macro AP)",
+    "early_stopping": "validation macro AP, min_delta=1e-5",
+    "seed": 42,
+    "device": "cpu"
+  },
+  {
+    "model": "neural",
+    "learning_rate": 0.001,
+    "positive_weighting": true,
+    "positive_weights": [
+      18.784671532846716,
+      22.88105726872247,
+      23.529411764705884
+    ],
+    "batch_size": 32,
+    "maximum_epochs": 100,
+    "patience": 15,
+    "best_epoch": 17,
+    "validation_macro_ap": 0.20653900596244631,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "gradient_clip_norm": 1.0,
+    "scheduler": "ReduceLROnPlateau(validation macro AP)",
+    "early_stopping": "validation macro AP, min_delta=1e-5",
+    "seed": 42,
+    "device": "cpu"
+  },
+  {
+    "model": "neural",
+    "learning_rate": 0.0003,
+    "positive_weighting": false,
+    "positive_weights": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "batch_size": 32,
+    "maximum_epochs": 100,
+    "patience": 15,
+    "best_epoch": 45,
+    "validation_macro_ap": 0.20362158606977496,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "gradient_clip_norm": 1.0,
+    "scheduler": "ReduceLROnPlateau(validation macro AP)",
+    "early_stopping": "validation macro AP, min_delta=1e-5",
+    "seed": 42,
+    "device": "cpu"
+  },
+  {
+    "model": "neural",
+    "learning_rate": 0.0003,
+    "positive_weighting": true,
+    "positive_weights": [
+      18.784671532846716,
+      22.88105726872247,
+      23.529411764705884
+    ],
+    "batch_size": 32,
+    "maximum_epochs": 100,
+    "patience": 15,
+    "best_epoch": 36,
+    "validation_macro_ap": 0.20615779960881256,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "gradient_clip_norm": 1.0,
+    "scheduler": "ReduceLROnPlateau(validation macro AP)",
+    "early_stopping": "validation macro AP, min_delta=1e-5",
+    "seed": 42,
+    "device": "cpu"
+  }
+]

@@ -1,0 +1,93 @@
+{
+  "hyperparameters": {
+    "model": "baseline",
+    "C": 0.1,
+    "class_weight": null,
+    "validation_macro_ap": 0.19877133093982483
+  },
+  "thresholds": [
+    0.14171076592275547,
+    0.10681381172058783,
+    0.10449289412866145
+  ],
+  "validation_metrics": {
+    "coronary_heart_disease": {
+      "threshold": 0.14171076592275547,
+      "precision": 0.2627118644067797,
+      "recall_sensitivity": 0.5344827586206896,
+      "specificity": 0.9211956521739131,
+      "f1": 0.3522727272727273,
+      "roc_auc": 0.8533389555222388,
+      "average_precision": 0.23458393486104817,
+      "pr_auc_trapezoidal": 0.2262505219905798,
+      "brier_score": 0.042281439963956155,
+      "log_loss": 0.15547946938638968,
+      "ece_10_equal_width_bins": 0.0068779871184958775,
+      "positive_support": 58,
+      "negative_support": 1104,
+      "confusion_matrix": [
+        [
+          1017,
+          87
+        ],
+        [
+          27,
+          31
+        ]
+      ],
+      "zero_division_policy": "Undefined precision/recall/F1 set to zero; unavailable AUCs are null."
+    },
+    "heart_failure": {
+      "threshold": 0.10681381172058783,
+      "precision": 0.20175438596491227,
+      "recall_sensitivity": 0.4791666666666667,
+      "specificity": 0.9183123877917415,
+      "f1": 0.2839506172839506,
+      "roc_auc": 0.8339224266906045,
+      "average_precision": 0.1691801619347651,
+      "pr_auc_trapezoidal": 0.16164339965649577,
+      "brier_score": 0.03680320951911736,
+      "log_loss": 0.1415198049466215,
+      "ece_10_equal_width_bins": 0.0051129843206627005,
+      "positive_support": 48,
+      "negative_support": 1114,
+      "confusion_matrix": [
+        [
+          1023,
+          91
+        ],
+        [
+          25,
+          23
+        ]
+      ],
+      "zero_division_policy": "Undefined precision/recall/F1 set to zero; unavailable AUCs are null."
+    },
+    "heart_attack_history": {
+      "threshold": 0.10449289412866145,
+      "precision": 0.23076923076923078,
+      "recall_sensitivity": 0.5625,
+      "specificity": 0.9192100538599641,
+      "f1": 0.32727272727272727,
+      "roc_auc": 0.8545687462597247,
+      "average_precision": 0.1925498960236612,
+      "pr_auc_trapezoidal": 0.1806632293602792,
+      "brier_score": 0.03644833410197318,
+      "log_loss": 0.1381590737550893,
+      "ece_10_equal_width_bins": 0.0159620155069775,
+      "positive_support": 48,
+      "negative_support": 1114,
+      "confusion_matrix": [
+        [
+          1024,
+          90
+        ],
+        [
+          21,
+          27
+        ]
+      ],
+      "zero_division_policy": "Undefined precision/recall/F1 set to zero; unavailable AUCs are null."
+    }
+  }
+}

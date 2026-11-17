@@ -1,0 +1,96 @@
+{
+  "method": "Iterative multi-label stratification augmented with positive label pairs",
+  "seed": 42,
+  "partitions": {
+    "train": {
+      "count": 5421,
+      "fraction": 0.6999354422207876,
+      "positive": {
+        "coronary_heart_disease": 274,
+        "heart_failure": 227,
+        "heart_attack_history": 221
+      },
+      "negative": {
+        "coronary_heart_disease": 5147,
+        "heart_failure": 5194,
+        "heart_attack_history": 5200
+      },
+      "prevalence_unweighted": {
+        "coronary_heart_disease": 0.05054418004058292,
+        "heart_failure": 0.04187419295332964,
+        "heart_attack_history": 0.0407673860911271
+      },
+      "multiple_conditions": 198,
+      "combinations": {
+        "000": 4959,
+        "001": 72,
+        "010": 87,
+        "011": 29,
+        "100": 105,
+        "101": 58,
+        "110": 49,
+        "111": 62
+      }
+    },
+    "validation": {
+      "count": 1162,
+      "fraction": 0.15003227888960619,
+      "positive": {
+        "coronary_heart_disease": 58,
+        "heart_failure": 48,
+        "heart_attack_history": 48
+      },
+      "negative": {
+        "coronary_heart_disease": 1104,
+        "heart_failure": 1114,
+        "heart_attack_history": 1114
+      },
+      "prevalence_unweighted": {
+        "coronary_heart_disease": 0.04991394148020654,
+        "heart_failure": 0.04130808950086059,
+        "heart_attack_history": 0.04130808950086059
+      },
+      "multiple_conditions": 38,
+      "combinations": {
+        "000": 1062,
+        "001": 18,
+        "010": 20,
+        "011": 4,
+        "100": 24,
+        "101": 10,
+        "110": 8,
+        "111": 16
+      }
+    },
+    "test": {
+      "count": 1162,
+      "fraction": 0.15003227888960619,
+      "positive": {
+        "coronary_heart_disease": 59,
+        "heart_failure": 49,
+        "heart_attack_history": 47
+      },
+      "negative": {
+        "coronary_heart_disease": 1103,
+        "heart_failure": 1113,
+        "heart_attack_history": 1115
+      },
+      "prevalence_unweighted": {
+        "coronary_heart_disease": 0.050774526678141134,
+        "heart_failure": 0.04216867469879518,
+        "heart_attack_history": 0.04044750430292599
+      },
+      "multiple_conditions": 39,
+      "combinations": {
+        "000": 1061,
+        "001": 17,
+        "010": 21,
+        "011": 4,
+        "100": 24,
+        "101": 11,
+        "110": 9,
+        "111": 15
+      }
+    }
+  }
+}

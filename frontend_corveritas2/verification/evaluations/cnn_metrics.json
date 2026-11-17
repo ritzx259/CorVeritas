@@ -1,0 +1,59 @@
+{
+  "model_id": "cnn",
+  "accuracy": 0.8478260869565217,
+  "precision": 0.8936170212765957,
+  "recall": 0.8235294117647058,
+  "f1": 0.8571428571428571,
+  "roc_auc": 0.9094930655188904,
+  "average_precision": 0.9027037819630865,
+  "provenance": "Evaluated the saved cnn artifact on the source-defined 184-row test partition (20%, stratified, random_state=42, threshold=0.50). The partition is reconstructed from the original training script. No retraining or threshold tuning. Saved 2026-11-09T12:18:23.112748+00:00. Not external or clinical validation.",
+  "evaluation": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "partition": "test",
+    "threshold": 0.5,
+    "used_during_training": false,
+    "sample_count": 184,
+    "training_sample_count": 736
+  },
+  "dataset": {
+    "path": "data/heart_disease_uci.csv",
+    "sha256": "574f2fa2b43012fa25fca4fcdb36bd7c6bccdd0af4242f6c0e4c8633c5a072ae",
+    "row_count": 920
+  },
+  "training_source": {
+    "path": "models/training_model2.py",
+    "sha256": "da4f57fee984e64cebc95207c967527f476cabffd71bc88d77dc1964ec3ad7bc"
+  },
+  "artifact_sha256": {
+    "corveritas_stage2_cnn.keras": "df322dd2935c619a6a40fbc5230c6e91879004ff9e461006aa1c883d292b7f94",
+    "preprocessor_stage2_cnn.pkl": "a0cbfdff8fe00488e24ac467ce337799617a9c9042fa5da6697a45d2507a9d38"
+  },
+  "evaluation_indices_sha256": "7a0a899817a2c05c5352f6d5f68131d7c0a2897d5e9a0fe1bbc6f09d660d8dfe",
+  "confusion_matrix": {
+    "label_order": [
+      0,
+      1
+    ],
+    "values": [
+      [
+        72,
+        10
+      ],
+      [
+        18,
+        84
+      ]
+    ]
+  },
+  "class_counts": {
+    "0": 82,
+    "1": 102
+  },
+  "software": {
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.6.1"
+  },
+  "created_at": "2026-11-09T12:18:23.112748+00:00"
+}

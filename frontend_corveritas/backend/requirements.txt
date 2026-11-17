@@ -1,0 +1,12 @@
+fastapi==0.115.12
+joblib==1.5.3
+numba==0.60.0
+numpy==2.0.2
+pandas==2.3.3
+pydantic==2.11.3
+scikit-learn==1.6.1
+shap==0.47.2
+tensorflow==2.20.0
+uvicorn[standard]==0.34.0
+pytest==8.3.5
+httpx==0.28.1

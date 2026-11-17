@@ -1,0 +1,11 @@
+{
+  "checked_files": 41,
+  "unchanged_files": 39,
+  "additive_integration_files": [
+    "frontend_corveritas2/frontend/src/pages/Results.tsx",
+    "frontend_corveritas2/backend/app/main.py"
+  ],
+  "stage1_result_renderer_unchanged": true,
+  "original_stage1_form_validation_routes_inference_registry_and_model_files_unchanged": true,
+  "original_stage2_source_and_artifacts_unchanged": true
+}

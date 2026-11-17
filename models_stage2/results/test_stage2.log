@@ -1,0 +1,47 @@
+.....................                                                    [100%]
+=============================== warnings summary ===============================
+models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:64
+  /Users/ritzmk/Documents/CorVeritas/models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+    prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+
+models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:85
+models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:85
+models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:85
+models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:85
+models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:85
+models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:85
+  /Users/ritzmk/Documents/CorVeritas/models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:89
+models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:89
+models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:89
+models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:89
+models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:89
+models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:89
+  /Users/ritzmk/Documents/CorVeritas/models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_mathtext.py:45
+  /Users/ritzmk/Documents/CorVeritas/models_stage2/.venv/lib/python3.11/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+tests/test_pipeline.py::test_split_participants_disjoint_reproducible[True]
+tests/test_pipeline.py::test_split_participants_disjoint_reproducible[True]
+  /Users/ritzmk/Documents/CorVeritas/models_stage2/../models_stage2/preprocess.py:135: UserWarning: iterative-stratification unavailable; using label-combination stratification where feasible.
+    warnings.warn("iterative-stratification unavailable; using label-combination stratification where feasible.")
+
+tests/test_pipeline.py::test_save_load_predictions_and_exact_shap[baseline]
+tests/test_pipeline.py::test_save_load_predictions_and_exact_shap[baseline]
+tests/test_pipeline.py::test_save_load_predictions_and_exact_shap[baseline]
+tests/test_pipeline.py::test_save_load_predictions_and_exact_shap[neural]
+tests/test_pipeline.py::test_save_load_predictions_and_exact_shap[neural]
+tests/test_pipeline.py::test_save_load_predictions_and_exact_shap[neural]
+tests/test_pipeline.py::test_artifact_corruption_rejected
+tests/test_pipeline.py::test_artifact_corruption_rejected
+tests/test_pipeline.py::test_artifact_corruption_rejected
+  /Users/ritzmk/Documents/CorVeritas/models_stage2/.venv/lib/python3.11/site-packages/sklearn/linear_model/_logistic.py:451: DeprecationWarning: scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0.
+    opt_res = optimize.minimize(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+21 passed, 25 warnings in 36.58s

@@ -1,0 +1,285 @@
+{
+  "version": "corveritas-stage2-1.0.0",
+  "run_id": "20261023T181032Z-cc7796d8",
+  "created_utc": "2026-10-23T18:10:53.810973+00:00",
+  "features": [
+    "age",
+    "bmi",
+    "systolic_bp",
+    "diastolic_bp",
+    "total_cholesterol",
+    "sex",
+    "diabetes_history",
+    "smoking_history"
+  ],
+  "transformed_features": [
+    "numeric__age",
+    "numeric__bmi",
+    "numeric__systolic_bp",
+    "numeric__diastolic_bp",
+    "numeric__total_cholesterol",
+    "categorical__sex_Female",
+    "categorical__sex_Male",
+    "categorical__sex_Unknown",
+    "categorical__diabetes_history_No",
+    "categorical__diabetes_history_Yes",
+    "categorical__diabetes_history_Borderline",
+    "categorical__diabetes_history_Unknown",
+    "categorical__smoking_history_No",
+    "categorical__smoking_history_Yes",
+    "categorical__smoking_history_Unknown"
+  ],
+  "labels": [
+    "coronary_heart_disease",
+    "heart_failure",
+    "heart_attack_history"
+  ],
+  "architecture": {
+    "input_dim": 15,
+    "hidden": [
+      128,
+      64
+    ],
+    "dropout": [
+      0.3,
+      0.2
+    ]
+  },
+  "selected_model": "neural",
+  "selection_rule": "Highest validation macro average precision; ties favor baseline",
+  "threshold_rule": "Per-label maximum validation F1; ties favor higher threshold",
+  "models": {
+    "baseline": {
+      "hyperparameters": {
+        "model": "baseline",
+        "C": 0.1,
+        "class_weight": null,
+        "validation_macro_ap": 0.19877133093982483
+      },
+      "thresholds": [
+        0.14171076592275547,
+        0.10681381172058783,
+        0.10449289412866145
+      ],
+      "validation_metrics": {
+        "coronary_heart_disease": {
+          "threshold": 0.14171076592275547,
+          "precision": 0.2627118644067797,
+          "recall_sensitivity": 0.5344827586206896,
+          "specificity": 0.9211956521739131,
+          "f1": 0.3522727272727273,
+          "roc_auc": 0.8533389555222388,
+          "average_precision": 0.23458393486104817,
+          "pr_auc_trapezoidal": 0.2262505219905798,
+          "brier_score": 0.042281439963956155,
+          "log_loss": 0.15547946938638968,
+          "ece_10_equal_width_bins": 0.0068779871184958775,
+          "positive_support": 58,
+          "negative_support": 1104,
+          "confusion_matrix": [
+            [
+              1017,
+              87
+            ],
+            [
+              27,
+              31
+            ]
+          ],
+          "zero_division_policy": "Undefined precision/recall/F1 set to zero; unavailable AUCs are null."
+        },
+        "heart_failure": {
+          "threshold": 0.10681381172058783,
+          "precision": 0.20175438596491227,
+          "recall_sensitivity": 0.4791666666666667,
+          "specificity": 0.9183123877917415,
+          "f1": 0.2839506172839506,
+          "roc_auc": 0.8339224266906045,
+          "average_precision": 0.1691801619347651,
+          "pr_auc_trapezoidal": 0.16164339965649577,
+          "brier_score": 0.03680320951911736,
+          "log_loss": 0.1415198049466215,
+          "ece_10_equal_width_bins": 0.0051129843206627005,
+          "positive_support": 48,
+          "negative_support": 1114,
+          "confusion_matrix": [
+            [
+              1023,
+              91
+            ],
+            [
+              25,
+              23
+            ]
+          ],
+          "zero_division_policy": "Undefined precision/recall/F1 set to zero; unavailable AUCs are null."
+        },
+        "heart_attack_history": {
+          "threshold": 0.10449289412866145,
+          "precision": 0.23076923076923078,
+          "recall_sensitivity": 0.5625,
+          "specificity": 0.9192100538599641,
+          "f1": 0.32727272727272727,
+          "roc_auc": 0.8545687462597247,
+          "average_precision": 0.1925498960236612,
+          "pr_auc_trapezoidal": 0.1806632293602792,
+          "brier_score": 0.03644833410197318,
+          "log_loss": 0.1381590737550893,
+          "ece_10_equal_width_bins": 0.0159620155069775,
+          "positive_support": 48,
+          "negative_support": 1114,
+          "confusion_matrix": [
+            [
+              1024,
+              90
+            ],
+            [
+              21,
+              27
+            ]
+          ],
+          "zero_division_policy": "Undefined precision/recall/F1 set to zero; unavailable AUCs are null."
+        }
+      }
+    },
+    "neural": {
+      "hyperparameters": {
+        "learning_rate": 0.001,
+        "positive_weighting": false,
+        "positive_weights": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "batch_size": 32,
+        "maximum_epochs": 100,
+        "patience": 15,
+        "best_epoch": 21,
+        "validation_macro_ap": 0.2107449651469663,
+        "optimizer": "AdamW",
+        "weight_decay": 0.01,
+        "gradient_clip_norm": 1.0,
+        "scheduler": "ReduceLROnPlateau(validation macro AP)",
+        "early_stopping": "validation macro AP, min_delta=1e-5",
+        "seed": 42,
+        "device": "cpu"
+      },
+      "thresholds": [
+        0.14829950034618378,
+        0.13373057544231415,
+        0.1541489213705063
+      ],
+      "validation_metrics": {
+        "coronary_heart_disease": {
+          "threshold": 0.14829950034618378,
+          "precision": 0.25196850393700787,
+          "recall_sensitivity": 0.5517241379310345,
+          "specificity": 0.9139492753623188,
+          "f1": 0.34594594594594597,
+          "roc_auc": 0.8637556221889056,
+          "average_precision": 0.2728551030040886,
+          "pr_auc_trapezoidal": 0.26585666117333684,
+          "brier_score": 0.041567443705660935,
+          "log_loss": 0.15176660257563854,
+          "ece_10_equal_width_bins": 0.013652378125773445,
+          "positive_support": 58,
+          "negative_support": 1104,
+          "confusion_matrix": [
+            [
+              1009,
+              95
+            ],
+            [
+              26,
+              32
+            ]
+          ],
+          "zero_division_policy": "Undefined precision/recall/F1 set to zero; unavailable AUCs are null."
+        },
+        "heart_failure": {
+          "threshold": 0.13373057544231415,
+          "precision": 0.19101123595505617,
+          "recall_sensitivity": 0.3541666666666667,
+          "specificity": 0.9353680430879713,
+          "f1": 0.24817518248175183,
+          "roc_auc": 0.8312855326152004,
+          "average_precision": 0.16209297758158028,
+          "pr_auc_trapezoidal": 0.15429778089216653,
+          "brier_score": 0.03705515842332335,
+          "log_loss": 0.1433225949930071,
+          "ece_10_equal_width_bins": 0.009164051144750928,
+          "positive_support": 48,
+          "negative_support": 1114,
+          "confusion_matrix": [
+            [
+              1042,
+              72
+            ],
+            [
+              31,
+              17
+            ]
+          ],
+          "zero_division_policy": "Undefined precision/recall/F1 set to zero; unavailable AUCs are null."
+        },
+        "heart_attack_history": {
+          "threshold": 0.1541489213705063,
+          "precision": 0.27848101265822783,
+          "recall_sensitivity": 0.4583333333333333,
+          "specificity": 0.9488330341113106,
+          "f1": 0.3464566929133858,
+          "roc_auc": 0.8631526780371035,
+          "average_precision": 0.19728681485522997,
+          "pr_auc_trapezoidal": 0.19005643809012712,
+          "brier_score": 0.035955094950928794,
+          "log_loss": 0.1340897815590038,
+          "ece_10_equal_width_bins": 0.006730648882930742,
+          "positive_support": 48,
+          "negative_support": 1114,
+          "confusion_matrix": [
+            [
+              1057,
+              57
+            ],
+            [
+              26,
+              22
+            ]
+          ],
+          "zero_division_policy": "Undefined precision/recall/F1 set to zero; unavailable AUCs are null."
+        }
+      }
+    }
+  },
+  "score_interpretation": "uncalibrated model scores for reported diagnosis history",
+  "calibration": "not fitted",
+  "cohort_path": "/Users/ritzmk/Documents/CorVeritas/models_stage2/data/processed/cohort.csv",
+  "cohort_sha256": "c0296b2b71c6e42208563518f081f6a73cdb4d51018a2cff965981be5454e275",
+  "splits_sha256": "f790a108b82a0655b3b71b6ef93c312a12cf6718013ce10a92bcc5e78a28b1ca",
+  "result_dir": "/Users/ritzmk/Documents/CorVeritas/models_stage2/results/runs/20261023T181032Z-cc7796d8",
+  "limitations": [
+    "Research prototype, not a validated diagnostic tool or a substitute for medical assessment.",
+    "Scores estimate associations with self-reported previous diagnoses, not future disease onset.",
+    "Uncalibrated model scores; positive weighting can materially alter probability calibration.",
+    "Cross-sectional measurements may follow diagnosis, treatment or lifestyle changes; contributions are not causal.",
+    "Unweighted NHANES sample evaluation is not a US population estimate; survey design is not modeled.",
+    "Complete-label selection, missing measurements, small positive counts and US sampling limit generalization."
+  ],
+  "python": "3.11.3 (v3.11.3:f3909b8bc8, Apr  4 2023, 20:12:10) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-14.5-arm64-arm-64bit",
+  "packages": {
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.6.1",
+    "torch": "2.11.0",
+    "joblib": "1.5.3",
+    "matplotlib": "3.10.6"
+  },
+  "artifact_sha256": {
+    "preprocessor.joblib": "bccc931c0a52de13612f971905a66b693714c12cb6ed2ad64ca5a65770e6d949",
+    "baseline.joblib": "a67554172816b94a00e4ee0aa38f7f8c67ff7e048684a4996ba3597764a5a582",
+    "neural.pt": "ed2def29b0ac3cd882e55e571a5f1bbbcff6bccfd0936d881c740a9f9deae663",
+    "explanation_background.joblib": "dd970face1aac6a525f6781848aa91184b9f54adf90284f21f311e1b727a9209"
+  },
+  "plot_dir": "/Users/ritzmk/Documents/CorVeritas/models_stage2/results/plots/20261023T181032Z-cc7796d8"
+}

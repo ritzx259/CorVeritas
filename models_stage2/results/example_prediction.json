@@ -1,0 +1,179 @@
+{
+  "model_version": "corveritas-stage2-1.0.0",
+  "run_id": "20261023T181032Z-cc7796d8",
+  "model": "neural",
+  "conditions": [
+    {
+      "condition": "coronary_heart_disease",
+      "condition_name": "Reported coronary heart disease history",
+      "model_score": 0.027989404276013374,
+      "score_type": "uncalibrated_model_score",
+      "selected_threshold": 0.14829950034618378,
+      "binary_classification": 0,
+      "classification_meaning": "Above/below a validation-selected research threshold for reported diagnosis history; not a diagnosis.",
+      "feature_contributions": [
+        {
+          "feature": "diabetes_history",
+          "contribution": 0.03263341748606763,
+          "description": "diabetes_history increases the model score by 0.0326 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "total_cholesterol",
+          "contribution": -0.023868215972015605,
+          "description": "total_cholesterol decreases the model score by 0.0239 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "systolic_bp",
+          "contribution": -0.023219745970436634,
+          "description": "systolic_bp decreases the model score by 0.0232 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "diastolic_bp",
+          "contribution": -0.020302966512691256,
+          "description": "diastolic_bp decreases the model score by 0.0203 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "sex",
+          "contribution": 0.01985333414268098,
+          "description": "sex increases the model score by 0.0199 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "smoking_history",
+          "contribution": 0.013491904676129707,
+          "description": "smoking_history increases the model score by 0.0135 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "age",
+          "contribution": 0.003942778146381443,
+          "description": "age increases the model score by 0.0039 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "bmi",
+          "contribution": 0.0014136843679537492,
+          "description": "bmi increases the model score by 0.0014 relative to the sampled training background; association, not causation."
+        }
+      ],
+      "explanation_base_score": 0.024045204743742943,
+      "explanation_reconstruction_error": 1.4502532508231525e-10
+    },
+    {
+      "condition": "heart_failure",
+      "condition_name": "Reported congestive heart failure history",
+      "model_score": 0.024978432804346085,
+      "score_type": "uncalibrated_model_score",
+      "selected_threshold": 0.13373057544231415,
+      "binary_classification": 0,
+      "classification_meaning": "Above/below a validation-selected research threshold for reported diagnosis history; not a diagnosis.",
+      "feature_contributions": [
+        {
+          "feature": "diabetes_history",
+          "contribution": 0.02589520540459489,
+          "description": "diabetes_history increases the model score by 0.0259 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "total_cholesterol",
+          "contribution": -0.024324002599314554,
+          "description": "total_cholesterol decreases the model score by 0.0243 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "systolic_bp",
+          "contribution": -0.01821496575269066,
+          "description": "systolic_bp decreases the model score by 0.0182 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "smoking_history",
+          "contribution": 0.01327373496724249,
+          "description": "smoking_history increases the model score by 0.0133 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "sex",
+          "contribution": 0.005812054720635729,
+          "description": "sex increases the model score by 0.0058 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "age",
+          "contribution": 0.0034358534720126954,
+          "description": "age increases the model score by 0.0034 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "diastolic_bp",
+          "contribution": -0.0020991964919971906,
+          "description": "diastolic_bp decreases the model score by 0.0021 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "bmi",
+          "contribution": -0.0003422396387691151,
+          "description": "bmi decreases the model score by 0.0003 relative to the sampled training background; association, not causation."
+        }
+      ],
+      "explanation_base_score": 0.021541956812143326,
+      "explanation_reconstruction_error": 2.45520936914545e-10
+    },
+    {
+      "condition": "heart_attack_history",
+      "condition_name": "Reported previous myocardial infarction",
+      "model_score": 0.0810619369149208,
+      "score_type": "uncalibrated_model_score",
+      "selected_threshold": 0.1541489213705063,
+      "binary_classification": 0,
+      "classification_meaning": "Above/below a validation-selected research threshold for reported diagnosis history; not a diagnosis.",
+      "feature_contributions": [
+        {
+          "feature": "diabetes_history",
+          "contribution": 0.035071979498752626,
+          "description": "diabetes_history increases the model score by 0.0351 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "smoking_history",
+          "contribution": 0.027362551934857038,
+          "description": "smoking_history increases the model score by 0.0274 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "total_cholesterol",
+          "contribution": -0.012783533332139996,
+          "description": "total_cholesterol decreases the model score by 0.0128 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "systolic_bp",
+          "contribution": -0.010113939214269507,
+          "description": "systolic_bp decreases the model score by 0.0101 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "sex",
+          "contribution": 0.009853530324562598,
+          "description": "sex increases the model score by 0.0099 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "age",
+          "contribution": 0.006650076405037453,
+          "description": "age increases the model score by 0.0067 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "diastolic_bp",
+          "contribution": -0.004836703598037673,
+          "description": "diastolic_bp decreases the model score by 0.0048 relative to the sampled training background; association, not causation."
+        },
+        {
+          "feature": "bmi",
+          "contribution": 0.002574501123092432,
+          "description": "bmi increases the model score by 0.0026 relative to the sampled training background; association, not causation."
+        }
+      ],
+      "explanation_base_score": 0.02728339284658432,
+      "explanation_reconstruction_error": 1.0299050501316742e-09
+    }
+  ],
+  "warnings": [
+    "Smoking is encoded as lifetime 100+ cigarettes, not current smoking status. Former/current smoker implies this lifetime threshold; confirm it in the frontend."
+  ],
+  "limitations": [
+    "Research prototype, not a validated diagnostic tool or a substitute for medical assessment.",
+    "Scores estimate associations with self-reported previous diagnoses, not future disease onset.",
+    "Uncalibrated model scores; positive weighting can materially alter probability calibration.",
+    "Cross-sectional measurements may follow diagnosis, treatment or lifestyle changes; contributions are not causal.",
+    "Unweighted NHANES sample evaluation is not a US population estimate; survey design is not modeled.",
+    "Complete-label selection, missing measurements, small positive counts and US sampling limit generalization."
+  ],
+  "explanation_method": "Exact grouped interventional Shapley values on model-score scale",
+  "explanation_limitations": "Training-background associations, not causal effects. Mixed feature coalitions may be physiologically implausible or outside the data distribution."
+}

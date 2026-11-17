@@ -1,0 +1,12 @@
+{
+  "models/training_model2.py": "da4f57fee984e64cebc95207c967527f476cabffd71bc88d77dc1964ec3ad7bc",
+  "models/training_model3.py": "f1b4b3db7c7182313b1879fb77fdc09aa02752817881e3bf9847c558a7ca8b0d",
+  "models/training_models.py": "a19c9c6580d88f87cd733bd95ff2845962b1e5843275f07a813ce00f5bee9be7",
+  "models/corveritas_stage1.keras": "0fe3371d0761250e2104ae6451318fe8cbe51e2372c12c1c81d77e36352f27fd",
+  "models/corveritas_stage2_cnn.keras": "df322dd2935c619a6a40fbc5230c6e91879004ff9e461006aa1c883d292b7f94",
+  "models/preprocessor.pkl": "a0cbfdff8fe00488e24ac467ce337799617a9c9042fa5da6697a45d2507a9d38",
+  "models/preprocessor_stage2_cnn.pkl": "a0cbfdff8fe00488e24ac467ce337799617a9c9042fa5da6697a45d2507a9d38",
+  "models/preprocessor_stage3_random_forest.pkl": "1d322151df55d139ef448546f4672443d2763ad05025483ddc0967f557664e08",
+  "models/corveritas_stage3_random_forest.joblib": "332fabf2f50a0927217ccfaa7838065efcf29424921de4e11f4512a4b1d929be",
+  "data/heart_disease_uci.csv": "574f2fa2b43012fa25fca4fcdb36bd7c6bccdd0af4242f6c0e4c8633c5a072ae"
+}

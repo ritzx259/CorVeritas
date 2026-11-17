@@ -1,0 +1,11 @@
+model,C,class_weight,validation_macro_ap,learning_rate,positive_weighting,positive_weights,batch_size,maximum_epochs,patience,best_epoch,optimizer,weight_decay,gradient_clip_norm,scheduler,early_stopping,seed,device
+baseline,0.1,,0.19877133093982483,,,,,,,,,,,,,,
+baseline,0.1,balanced,0.19806586192692588,,,,,,,,,,,,,,
+baseline,1.0,,0.19748404780799125,,,,,,,,,,,,,,
+baseline,1.0,balanced,0.19621723244962033,,,,,,,,,,,,,,
+baseline,10.0,,0.19574252407669168,,,,,,,,,,,,,,
+baseline,10.0,balanced,0.19569440870427482,,,,,,,,,,,,,,
+neural,,,0.2063540937831204,0.001,False,"[1.0, 1.0, 1.0]",32.0,100.0,15.0,9.0,AdamW,0.01,1.0,ReduceLROnPlateau(validation macro AP),"validation macro AP, min_delta=1e-5",42.0,mps
+neural,,,0.20832626875151652,0.001,True,"[18.784671532846716, 22.88105726872247, 23.529411764705884]",32.0,100.0,15.0,17.0,AdamW,0.01,1.0,ReduceLROnPlateau(validation macro AP),"validation macro AP, min_delta=1e-5",42.0,mps
+neural,,,0.20871183059161177,0.0003,False,"[1.0, 1.0, 1.0]",32.0,100.0,15.0,21.0,AdamW,0.01,1.0,ReduceLROnPlateau(validation macro AP),"validation macro AP, min_delta=1e-5",42.0,mps
+neural,,,0.2039432983293311,0.0003,True,"[18.784671532846716, 22.88105726872247, 23.529411764705884]",32.0,100.0,15.0,36.0,AdamW,0.01,1.0,ReduceLROnPlateau(validation macro AP),"validation macro AP, min_delta=1e-5",42.0,mps

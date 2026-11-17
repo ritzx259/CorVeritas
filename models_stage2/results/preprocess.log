@@ -1,0 +1,102 @@
+{
+  "raw_shapes": {
+    "MCQ_L": [
+      11744,
+      35
+    ],
+    "DEMO_L": [
+      11933,
+      27
+    ],
+    "BMX_L": [
+      8860,
+      22
+    ],
+    "BPXO_L": [
+      7801,
+      12
+    ],
+    "TCHOL_L": [
+      8068,
+      4
+    ],
+    "DIQ_L": [
+      11744,
+      9
+    ],
+    "SMQ_L": [
+      9015,
+      9
+    ]
+  },
+  "merged_shape": [
+    11933,
+    21
+  ],
+  "merged_columns": [
+    "SEQN",
+    "RIDAGEYR",
+    "RIAGENDR",
+    "RIDSTATR",
+    "WTMEC2YR",
+    "SDMVSTRA",
+    "SDMVPSU",
+    "MCQ160c",
+    "MCQ160b",
+    "MCQ160e",
+    "BMXBMI",
+    "BPXOSY1",
+    "BPXOSY2",
+    "BPXOSY3",
+    "BPXODI1",
+    "BPXODI2",
+    "BPXODI3",
+    "LBXTC",
+    "WTPH2YR",
+    "DIQ010",
+    "SMQ020"
+  ],
+  "adult_rows_before_label_filter": 7809,
+  "excluded_nonadult_or_missing_age": 4124,
+  "excluded_incomplete_or_invalid_labels": 64,
+  "included_complete_labels": 7745,
+  "invalid_or_missing_labels_per_condition": {
+    "coronary_heart_disease": 36,
+    "heart_failure": 18,
+    "heart_attack_history": 15
+  },
+  "invalid_bp_readings_outside_engineering_bounds": 0,
+  "feature_values_replaced_by_missing": {
+    "age": 0,
+    "bmi": 0,
+    "diabetes_history": 0,
+    "diastolic_bp": 0,
+    "sex": 0,
+    "smoking_history": 0,
+    "systolic_bp": 0,
+    "total_cholesterol": 0
+  },
+  "cohort_policy": "Adults 20+, all three labels known; retain missing clinical inputs for train-only imputation.",
+  "survey_policy": "Unweighted sample ML only. WTMEC2YR/WTPH2YR/SDMVSTRA/SDMVPSU retained for audit, never predictors.",
+  "missing_features": {
+    "age": 0,
+    "bmi": 1817,
+    "systolic_bp": 1923,
+    "diastolic_bp": 1923,
+    "total_cholesterol": 2283,
+    "sex": 0,
+    "diabetes_history": 2,
+    "smoking_history": 27
+  },
+  "interview_only_included": 1725,
+  "source_sha256": {
+    "MCQ_L": "0889bb3eaa5adedf1a11c4af2d4776fc4c4c3cfdeea24fcedb77c4636b478f61",
+    "DEMO_L": "ca4374a158b493b8b0163e1388da21d57a18d1b9cecff2aa4e2fa2bec494fe23",
+    "BMX_L": "44440c416d9ad709e8b1708a5975378ab4d5b18edc39eb5015c2ae7186500170",
+    "BPXO_L": "189aa9bed689d2c69cf8d780b01de85073276fea5694dd52cdf696229f9054a6",
+    "TCHOL_L": "5c3312e555bb0706fd97cbd63fcbc9e78f00bda8d2d149732d9dd368169b25d3",
+    "DIQ_L": "9535a023673ae869afae19d842d8679e06f6a464606ac15900686b41ef05090f",
+    "SMQ_L": "abbefebfa5585b1e19c079fa14be20c113a4649318070197214b258d05b93c50"
+  },
+  "cohort_sha256": "c0296b2b71c6e42208563518f081f6a73cdb4d51018a2cff965981be5454e275"
+}

@@ -1,0 +1,15 @@
+.DS_Store
+**/.venv/
+**/node_modules/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.cache/
+**/.wheelhouse/
+**/.mplconfig/
+**/.keras/
+**/.tmp/
+**/.stage1_tmp/
+**/*.tsbuildinfo
+**/dist/
+**/coverage/

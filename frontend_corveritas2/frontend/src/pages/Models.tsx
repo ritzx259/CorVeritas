@@ -1,0 +1,33 @@
+import { ArrowUpRight, BrainCircuit, ChevronDown, Database, Layers3, Network, RefreshCw } from 'lucide-react';
+import { useResearch } from '../state';
+import { ErrorNotice, Loading, PageHeading, SafetyNotice, StatusBadge } from '../components/ui';
+
+const metricNames: [string, string][] = [['accuracy', 'Accuracy'], ['precision', 'Precision'], ['recall', 'Recall'], ['f1', 'F1 score'], ['roc_auc', 'ROC–AUC'], ['average_precision', 'Average precision']];
+const descriptions: Record<string, string> = {
+  mlp: 'A feed-forward neural network learns nonlinear relationships among the encoded clinical features. Dense layers are regularized with dropout and batch normalization.',
+  cnn: 'A one-dimensional convolutional network applies learned filters over the processed feature sequence. This is tabular classification, not ECG signal or medical image analysis.',
+  random_forest: 'An ensemble of decision trees combines multiple learned partitions of the feature space. The saved artifact contains both preprocessing and the fitted classifier.',
+};
+export default function Models() {
+  const { models, loading, error, refresh } = useResearch();
+  return <>
+    <PageHeading eyebrow="MODEL WORKBENCH" title="Different architectures. Shared inputs." description="Inspect the real model registry, saved evaluation evidence, and availability." action={<button className="button secondary small" onClick={() => void refresh()} disabled={loading}><RefreshCw size={15} className={loading ? 'spin' : ''} />Refresh status</button>} />
+    <div className="inline-note model-task-note"><BrainCircuit size={20} /><div><strong>Three binary classifiers, not three disease stages.</strong><p>All models estimate the same training target: original UCI label 0 versus labels 1–4 combined. Artifact filenames containing “stage2” or “stage3” do not indicate disease stages or subtypes.</p></div></div>
+    {loading ? <Loading /> : error ? <ErrorNotice message={error} retry={() => void refresh()} /> : <>
+      <div className="comparison-cards">{models.models.map((model, index) => { const Icon = index === 0 ? Network : index === 1 ? Layers3 : BrainCircuit; return <article key={model.id} className="card comparison-card"><div className="comparison-top"><span className="section-icon"><Icon size={25} /></span><StatusBadge available={model.available} /></div><div className="comparison-title"><h2>{model.name}</h2>{models.default_model_id === model.id && <span className="default-tag">CONFIGURED DEFAULT</span>}</div><p className="algorithm-name">{model.algorithm}</p><p className="model-description">{descriptions[model.id] || model.description || 'A trained binary classifier using the 13 clinical source features.'}</p><div className="model-detail-row"><span>Input schema</span><strong>13 original features</strong></div><div className="model-detail-row"><span>Decision threshold</span><strong>{model.threshold.toFixed(2)}</strong></div><div className="model-detail-row"><span>Local explanation</span><strong>{model.explanation_method || 'Not available'}</strong></div><details className="architecture-details"><summary>Architecture & artifact status <ChevronDown size={15} /></summary><p>{Array.isArray(model.architecture) ? model.architecture.join(' → ') : model.architecture}</p>{model.reason && <p className="artifact-reason">{model.reason}</p>}{model.artifact_directory && <p>Loaded from <code>{model.artifact_directory}</code></p>}{!model.available && model.training_command && <><span className="command-label">Training command</span><code>{model.training_command}</code></>}</details></article>; })}</div>
+      <section className="card metrics-panel">
+        <div className="section-heading"><div><p className="eyebrow">RECORDED EVALUATION</p><h2>Performance from the saved models.</h2></div><span className="evidence-tag"><Database size={14} />SAVED EVALUATION RECORDS</span></div>
+        <p className="panel-description">Scores use the dataset split and classification threshold defined in each original training script. The website reads saved results; refreshing this page does not retrain or evaluate models.</p>
+        {models.models.some((model) => model.metrics_evaluation?.used_during_training) && <p className="metrics-validation-note" role="note">The MLP scores use the validation partition monitored during training. They are not independent test results and should not be ranked directly against the CNN and Random Forest test scores.</p>}
+        <div className="table-scroll"><table className="metrics-table">
+          <caption className="sr-only">Saved model evaluation scores, with the evaluation partition identified for each model.</caption>
+          <thead><tr><th scope="col">Evaluation metric</th>{models.models.map((model) => <th scope="col" key={model.id}>{model.name}{model.metrics_evaluation && <small className="metric-partition">{model.metrics_evaluation.partition === 'validation' ? 'Validation' : 'Test'} · {model.metrics_evaluation.sample_count} samples · threshold {model.metrics_evaluation.threshold.toFixed(2)}</small>}</th>)}</tr></thead>
+          <tbody>{metricNames.map(([key, label]) => <tr key={key}><th scope="row">{label}</th>{models.models.map((model) => <td key={model.id} className={model.metrics?.[key] == null ? 'metric-unavailable' : ''}>{model.metrics?.[key] == null ? 'Not available' : model.metrics[key]?.toFixed(4)}</td>)}</tr>)}</tbody>
+        </table></div>
+        <div className="metrics-provenance">{models.models.map((model) => <p key={model.id}><strong>{model.name}: </strong>{model.metrics_note || "Not available. No saved metric provenance was supplied."}</p>)}</div>
+      </section>
+      <section className="section-block"><div className="section-heading"><div><p className="eyebrow">TRAINING ARTIFACTS</p><h2>Evidence from the original training runs.</h2></div></div><p className="panel-description">These are existing graph files served by the backend. Training and validation epoch curves describe training behavior; they are distinct from final held-out test metrics.</p>{models.models.map((model) => <details className="card plot-collection" key={model.id}><summary><span><strong>{model.name}</strong><small>{model.plots?.length || 0} saved plots</small></span><ChevronDown size={20} /></summary>{model.plots?.length ? <div className="plots-grid">{model.plots.map((plot) => <figure key={plot.url}><a href={plot.url} target="_blank" rel="noreferrer"><img src={plot.url} alt={`${model.name}: ${plot.name}`} loading="lazy" /><figcaption>{plot.name}<ArrowUpRight size={14} /></figcaption></a></figure>)}</div> : <p className="no-plots">Not available. No saved graph files were found for this model.</p>}</details>)}</section>
+    </>}
+    <SafetyNotice compact />
+  </>;
+}
